@@ -20,7 +20,20 @@
 
 
 
-    <app-text-message-box-file>
-        
-    </app-text-message-box-file>
+    <!-- <app-text-message-box-file 
+       placeholder="Escrive lo desesa"
+       (onMessage)="handleMessageWithFile($event)"
+       >
+
+    </app-text-message-box-file> -->
+
+    <app-text-message-box-select 
+       placeholder="Escrive lo desesa"
+       [options]="[{id:'1', text:'1'}]"
+       (onMessage)="handleMessageWithSelect($event)"
+       >
+
+    </app-text-message-box-select>
+
+
 </div>
