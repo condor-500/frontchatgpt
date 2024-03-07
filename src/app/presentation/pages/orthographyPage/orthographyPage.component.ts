@@ -1,8 +1,11 @@
 import { CommonModule } from '@angular/common';
 import { ChangeDetectionStrategy, Component } from '@angular/core';
-import { ChatMessageComponent } from '@components/chat-bubbles/chatMessage/chatMessage.component';
+
 import { MyMessageComponent } from '@components/chat-bubbles/myMessage/myMessage.component';
-import { TypingLoaderComponent } from '@components/typingLoader/typingLoader.component';
+import { ChatMessageComponent, TextMessageBoxFileComponent, TypingLoaderComponent } from '@components/index';
+import { TextMessageBoxComponent } from '@components/text-boxes/textMessageBox/textMessageBox.component';
+
+
 
 
 @Component({
@@ -12,9 +15,16 @@ import { TypingLoaderComponent } from '@components/typingLoader/typingLoader.com
     CommonModule,
     ChatMessageComponent,
     MyMessageComponent,
-    TypingLoaderComponent
+    TypingLoaderComponent,
+    TextMessageBoxComponent,
+    TextMessageBoxFileComponent
   ],
   templateUrl: './orthographyPage.component.html',
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export default class OrthographyPageComponent { }
+export default class OrthographyPageComponent {
+
+  handleMessage(promt:string){
+    console.log(promt)
+  }
+ }
